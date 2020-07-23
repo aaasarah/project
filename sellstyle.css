@@ -1,0 +1,223 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    
+}
+body
+{
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    
+}
+
+nav
+{
+    width: 100%;
+    height: 70px;
+    background-color: #414141;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.logo
+{
+    font-family: "Anton", serif;
+    font-weight: bolder;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    font-size: 35px;
+    margin-left: 20px;
+
+}
+.logo:hover
+{
+color: #dfe9f4;
+    
+}
+nav ul li a:hover
+{
+    color: #99ccff;
+}
+nav ul
+{
+    background-color: #414141;
+}
+
+nav ul li
+{
+   font-family: "cabin", serif;
+    display: inline-block;
+    font-weight: bolder;
+    text-transform: uppercase;
+    padding: 20px;
+    position: relative;
+}
+nav ul li a
+{
+    
+    text-decoration: none;
+    color: #fff;
+}
+nav ul li ul
+{
+   position:absolute;
+    visibility: hidden;
+    opacity: 0;
+    text-align: center;
+    width: 100%;
+    transition: 0.4s linear;
+        
+    
+}
+nav > ul > li > ul
+{
+    top: 100%;
+    left: 0;
+    border-top: 3px solid #fff;
+    
+}
+nav ul li:hover > ul
+{
+    visibility: visible;
+    opacity: 1;
+}
+
+
+label
+{
+    width: 150px;
+    height: 45px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #fff;
+    font-weight: bolder;
+    font-size: 30px;
+    color: #fff;
+    margin-right: 20px;
+    display: none;
+}
+label span
+{
+   font-family: "Roboto", serif;
+}
+
+.sell
+{
+   background-color: #e6faff;
+   margin:100px;
+   padding: 30px;
+   border-radius: 20px;
+   
+}
+h1
+{
+   text-align: center;
+   font-size: 50px;
+   font-family: "cabin", serif;
+   color: steelblue;
+}
+form
+{
+   margin: auto;
+   width: 300px;
+   color: steelblue;
+}
+input,button
+{
+   padding: 15px;
+   margin: 15px;
+    font-size: 20px;
+   border-radius: 10px;
+   font-family: "cabin", serif;
+    width: 300px;
+   height: 45px;
+   border-color: steelblue
+}
+button
+{
+   background-color: steelblue;
+   color: white;
+   cursor: pointer
+}
+button:hover
+{
+  color:steelblue;
+  background-color: white;
+}
+
+
+
+
+
+
+
+
+
+
+footer
+{
+    padding: 1rem 0;
+    background-color: #d7d4ed;
+    text-align: center;
+     color: rgba(0,0,0,0.7);
+    
+
+    
+}
+footer.social
+{
+    padding: 1.4rem 0;
+}
+footer .social i
+{
+   padding: 0.2rem;
+}
+footer .social i:hover
+{
+    color:#fff;
+    cursor: pointer;
+
+}
+
+
+
+@media (max-width: 768px)
+{
+    #menu
+    {
+        position: absolute;
+        top: 70px;
+        left: -100%;
+        transition: 0.4s linear;
+        width: 100%;
+    }
+    nav ul li
+    {
+        display: block;
+    }
+    label
+    {
+        display: flex;
+        cursor: pointer;
+    }
+    nav ul li ul
+    {
+        
+        width: max-content;
+       z-index: 1;
+        
+    }
+    input:checked ~ #menu
+    {
+        left: 0;
+    }
+}
